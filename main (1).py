@@ -1,23 +1,10 @@
-#Define the base class Player
-class Player:
-  def Play(self):
-    print("The Player is playing cricket.")
+def factorial(n):
+  if not ((n >= 0) and (n % 1 == 0)):
+    return ("Number can't be negative or floating point!")
+  return 1 if n == 0 else n * factorial(n - 1)
 
-#Define the derived class Batsman
-class Batsman(Player):
-  def play(self):
-    print ("The batsman is batting.")
 
-#Define the derived class Bowler
-class Bowler(Player):
-  def Play(self):
-    print("The bowler is bowling.")
-
-#Create objects of Batsman and Bowler classes
-batsman=Batsman ()
-bowler=Bowler ()
-
-#Call the play() method for each object
-batsman.Play()
-bowler.Play()
-  
+print("\nFactorial of 5: ", factorial(5))
+print("\nFactorial of -12: ", factorial(-12))
+print("\nFactorial of 1.22: ", factorial(1.22))
+print("\nFactorial of 100: ", factorial(100))
